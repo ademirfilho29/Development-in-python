@@ -3,12 +3,15 @@ from PIL import Image
 
 if __name__ == "__main__":
 
-    pasta_fotos_para_alterar= "C:\\Users\\USER\\Desktop\\mais fotos felipe"
+    pasta_fotos_para_alterar= "C:\\Users\\USER\\Desktop\\fotos editadas 5x5 cm - Copy"
         
     # caminho_pasta_salvar= "C:\\Users\\USER\\Desktop\\fotos editadas"
 
     #alterar a resolução das imagens 
-    nova_resu = (188,188)
+
+    #formula para a resolucao em cm = (cm x dpi das fotos)/2.54
+    
+    nova_resu = (480,530)
 
     #iterar sobre cada foto da pasta 
     for foto in os.listdir(pasta_fotos_para_alterar):
@@ -28,7 +31,7 @@ if __name__ == "__main__":
 
                 img_redimensionada = img.resize(nova_resu)
 
-                salvar_nome = f"imagem_editada {[]}"
+                salvar_nome = f"imagem_editada"
                 img_redimensionada.save(caminho_da_imagem)
 
                 print(f"Imagem {foto} redimensionada e salva como {salvar_nome}")
