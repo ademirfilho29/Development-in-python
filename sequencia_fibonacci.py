@@ -31,6 +31,8 @@ if __name__ == "__main__":
 
             prox_valor = sequencia_fib[-1] + sequencia_fib[-2]
             sequencia_fib.append(prox_valor )
+            
+        #VERIFICA SE O NUMERO SECOLHIDO PERTENCE OU NÃO A SEQUENCIA FIBONACCI
 
         if numero in sequencia_fib:
             return f"O número {numero} pertence à sequência de Fibonacci."
@@ -44,5 +46,5 @@ if __name__ == "__main__":
 
     numero_para_verificar = int(input("Digite um número que você gostaria de testar: "))
     print(pertenci_fibo(numero_para_verificar))
-    
+
     pass
